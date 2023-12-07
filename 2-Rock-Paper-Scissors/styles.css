@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #353535;
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+}
+
+nav{
+    width: 100vw;
+    padding: 20px 0;
+    color: #ffffff;
+    background-color: #4b4a4a;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.scoreContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 125px auto 0 auto;
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+    width: 200px;
+    color: white;
+    font-size: 1.5em;
+    background-color: #4b4a4a;
+}
+
+.choiceContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.choiceContainer button{
+    border: none;
+    font-size: 4em;
+    background-color: #4b4a4a;
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    transition: 0.1s;
+}
+
+.choiceContainer button:hover{
+    width: 160px;
+    height: 160px;
+    font-size: 4.5em;
+    transition: 0.1s;
+}
+
+.choiceContainer button:active{
+    background-color: #535458;
+}
+
+#result{
+    margin: 5px 0 25px 0;
+    color: white;
+    font-size: 1.3em;
+    text-align: center;
+    height: 33px;
+}
+
+#playAgain{
+    display: block;
+    padding: 20px;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    background-color: #4b4a4a;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.unhidden{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.hidden{
+    opacity: 0;
+    transition: 0.2s;
+}
+
+footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:50px;
+    text-align: center;
+    color: white;
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 500px) {
+    .choiceContainer button{
+        font-size: 3em;
+        width: 100px;
+        height: 100px;
+    }
+
+    .scoreContainer{
+        margin-top: 100px;
+    }
+
+    .choiceContainer button:hover{
+        width: 115px;
+        height: 115px;
+        font-size: 3.5em;
+        transition: 0.1s;
+    }
+}

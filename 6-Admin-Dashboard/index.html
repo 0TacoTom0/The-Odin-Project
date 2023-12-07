@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="images/icons8-dashboard-64.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="sidebar">
+            <div class="websiteTitle">
+                <img src="logo/view-dashboard.svg">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="sidebarFlexContainer animationSlide">
+                <ul style="list-style: none;">
+                    <li><a href=""><img src="logo/home.svg">Home</a></li>
+                    <li><a href=""><img src="logo/account.svg">Profile</a></li>
+                    <li><a href=""><img src="logo/message-badge.svg">Messages</a></li>
+                    <li><a href=""><img src="logo/history.svg">History</a></li>
+                    <li><a href=""><img src="logo/calendar-check.svg">Task</a></li>
+                    <li><a href=""><img src="logo/account-group.svg">Communities</a></li>
+                </ul>
+                <ul style="list-style: none;">
+                    <hr>
+                    <li><a href=""><img src="logo/cog.svg">Settings</a></li>
+                    <li><a href=""><img src="logo/face-agent.svg">Support</a></li>
+                    <li><a href=""><img src="logo/eye.svg">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mainGridContainer">
+            <div class="bottomShadow"></div>
+            <div class="navbar">
+                <div class="searchDiv">
+                    <input type="text">
+                    <button class="searchBtn"><img src="logo/magnify.svg"></button>
+                </div>
+                <div class="profileDiv">
+                    <p href="">Tom Bowcutt</p>
+                    <button id="notificationBtn"><img src="logo/bell-ring-outline.svg" class="linkCenter bellLogo" id="bellImg"></button>
+                    <a href=""><img src="images/123249098.png" class="profileImg linkCenter" style="filter: none;"></a>
+                </div>
+            </div>
+            <div class="navbarInputArea">
+                <div class="welcomeArea">
+                    <img src="images/123249098.png" class="profileImg linkCenter">
+                    <div class="welcomeMessage">
+                        <p>Hello there,</p>
+                        <h2>Tom (0TacoTom0)</h2>
+                    </div>
+                </div>
+                <div class="projectInputArea">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
+            </div>
+            <div class="mainContentDiv">
+                <div>
+                    <h3 class="gridTitle">Your Projects</h3>
+                <div class="projectCards">
+                    <div class="card">
+                        <div class="cardTextContainer">
+                            <h6>Etch-a-Sketch</h6>
+                            <p>This is a simple website that allows the user to make some awesome pixel art! There are also settings that allow the user to change the colour or the size of the canvas.</p>
+                        </div>
+                        <div class="cardButtonContainer">
+                            <button><img src="logo/star-plus-outline.svg"></button>
+                            <button><img src="logo/eye-plus-outline.svg"></button>
+                            <a href="https://github.com/0TacoTom0/Etch-a-Sketch" target=”_blank”><img src="logo/link.svg"></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cardTextContainer">
+                            <h6>Calculator</h6>
+                            <p>This is a simple calculator. Nothing much to say really it's just a calculator.</p>
+                        </div>
+                        <div class="cardButtonContainer">
+                            <button><img src="logo/star-plus-outline.svg"></button>
+                            <button><img src="logo/eye-plus-outline.svg"></button>
+                            <a href="https://github.com/0TacoTom0/Calculator" target=”_blank”><img src="logo/link.svg"></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cardTextContainer">
+                            <h6>Sign Up Form</h6>
+                            <p>This is a non-functioning website that was made to help reinforce my HTML form knowledge and CSS skills.</p>
+                        </div>
+                        <div class="cardButtonContainer">
+                            <button><img src="logo/star-plus-outline.svg"></button>
+                            <button><img src="logo/eye-plus-outline.svg"></button>
+                            <a href="https://github.com/0TacoTom0/Sign-Up-Form" target=”_blank”><img src="logo/link.svg"></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cardTextContainer">
+                            <h6>Rock Paper Scissors</h6>
+                            <p>An awesome game I made that has a state-of-the-art AI!</p>
+                        </div>
+                        <div class="cardButtonContainer">
+                            <button><img src="logo/star-plus-outline.svg"></button>
+                            <button><img src="logo/eye-plus-outline.svg"></button>
+                            <a href="https://github.com/0TacoTom0/rock-paper-scissors" target=”_blank”><img src="logo/link.svg"></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cardTextContainer">
+                            <h6>Landing Page</h6>
+                            <p>My first Odin Project assignment! Very nice.</p>
+                        </div>
+                        <div class="cardButtonContainer">
+                            <button><img src="logo/star-plus-outline.svg"></button>
+                            <button><img src="logo/eye-plus-outline.svg"></button>
+                            <a href="https://github.com/0TacoTom0/landing-page" target=”_blank”><img src="logo/link.svg"></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cardTextContainer">
+                            <h6>Admin Dashboard</h6>
+                            <p>This is the website you are currently on!</p>
+                        </div>
+                        <div class="cardButtonContainer">
+                            <button><img src="logo/star-plus-outline.svg"></button>
+                            <button><img src="logo/eye-plus-outline.svg"></button>
+                            <a href="https://github.com/0TacoTom0/Admin-Dashboard" target=”_blank”><img src="logo/link.svg"></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="newsContainer">
+                    <h3>Announcements</h3>
+                    <div class="announcementCard">
+                        <div>
+                            <h6>Site Maintenance</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h6>Community Share Day</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h6>Updated Privacy Policy</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <h3>Trending</h3>
+                    <div class="trendingCard">
+                        <div class="trendingProfileCard">
+                            <img src="images/pf1.jpeg">
+                            <div>
+                                <h6>@Tombow</h6>
+                                <p>Solved world hunger</p>
+                            </div>
+                        </div>
+                        <div class="trendingProfileCard">
+                            <img src="images/pf2.jpeg">
+                            <div>
+                                <h6>@LoganSmelly</h6>
+                                <p>Yippee</p>
+                            </div>
+                        </div>
+                        <div class="trendingProfileCard">
+                            <img src="images/pf3.jpeg">
+                            <div>
+                                <h6>@olifish</h6>
+                                <p>Weird guy</p>
+                            </div>
+                        </div>
+                        <div class="trendingProfileCard">
+                            <img src="images/pf4.jpeg">
+                            <div>
+                                <h6>@ranoutofideas</h6>
+                                <p>Give me some ideas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
