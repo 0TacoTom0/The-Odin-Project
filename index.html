@@ -3,15 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Odin Project</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="1-Landing-Page/index.html">Project 1</a>
-    <a href="2-Rock-Paper-Scissors/index.html">Project 2</a>
-    <a href="3-Etch-a-Sketch/index.html">Project 3</a>
-    <a href="4-Calculator/index.html">Project 4</a>
-    <a href="5-Sign-Up-Form/index.html">Project 5</a>
-    <a href="6-Admin-Dashboard/index.html">Project 6</a>
+    <nav>
+        <p>The <span class="blueSpan">Odin</span> Project</p>
+        <div>
+            <a onclick='window.scrollTo({top: 0, behavior: "smooth"});'">About</a>
+            <a href="#projects">Projects</a>
+        </div>
+    </nav>
+    <div class="aboutSection" id="about">
+        <div>        
+            <h1>About</h1>
+            <p>
+                This is a collection of projects made by me. The <span class="blueSpan">Odin</span> Project is an open-source online 
+                learning platform that teaches full stack web development with a focus on back-end and JavaScript technologies.
+            </p>
+        </div>
+        <div>
+            <img src="icons/tools.svg">
+        </div>
+    </div>
+    <div id="projects"></div>
+    <div class="cardContainer">
+        <div class="projectCard">
+            <div>
+                <h2>Admin Dashboard</h2>
+                <p>Project #6</p>
+            </div>
+            <div>
+                <a href="6-Admin-Dashboard/index.html"><img src="icons/link.svg"></a>
+            </div>  
+        </div>
+        <hr>
+        <div class="projectCard">
+            <div>
+                <h2>Sign-Up Form</h2>
+                <p>Project #5</p>
+            </div>
+            <div>
+                <a href="5-Sign-Up-Form/index.html"><img src="icons/link.svg"></a>
+            </div>  
+        </div>
+        <hr>
+        <div class="projectCard">
+            <div>
+                <h2>Calculator</h2>
+                <p>Project #4</p>
+            </div>
+            <div>
+                <a href="4-Calculator/index.html"><img src="icons/link.svg"></a>
+            </div>  
+        </div>
+        <hr>
+        <div class="projectCard">
+            <div>
+                <h2>Etch a Sketch</h2>
+                <p>Project #3</p>
+            </div>
+            <div>
+                <a href="3-Etch-a-Sketch/index.html"><img src="icons/link.svg"></a>
+            </div>  
+        </div>
+        <hr>
+        <div class="projectCard">
+            <div>
+                <h2>Rock Paper Scissors</h2>
+                <p>Project #2</p>
+            </div>
+            <div>
+                <a href="2-Rock-Paper-Scissors/index.html"><img src="icons/link.svg"></a>
+            </div>  
+        </div>
+        <hr>
+        <div class="projectCard">
+            <div>
+                <h2>Landing Page</h2>
+                <p>Project #1</p>
+            </div>
+            <div>
+                <a href="1-Landing-Page/index.html"><img src="icons/link.svg"></a>
+            </div>  
+        </div>
+    </div>
+    <footer>Made By Tom Bowcutt</footer>
 </body>
 </html>
