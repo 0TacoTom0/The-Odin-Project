@@ -142,7 +142,6 @@ nav a:last-child{
     height: 300px;
     width: 100%;
     border: 1px solid #444;
-    border-left: 4px solid #06F;
     border-radius: 10px;
     background-color: #131313;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(51,51,51,1) 100%);
@@ -151,6 +150,11 @@ nav a:last-child{
 
 .projectCard p{
     opacity: 0.5;
+    max-width: 50%;
+}
+
+.projectCard p:last-of-type{
+    margin-top: 20px;
 }
 
 .projectCard a{
@@ -214,5 +218,7 @@ footer{
 
     .projectCard{
         padding: 20px;
+        height: auto;
+        min-height: 300px;
     }
 }
