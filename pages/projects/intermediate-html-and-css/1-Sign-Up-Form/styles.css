@@ -1,0 +1,247 @@
+:root{
+    --light: white;
+    --dark: #182c25;
+    --darker: #0f1b17;
+    --text-colour: white;
+
+    --padding: 70px;
+    --padding-top-bottom: 20px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.moveDownAnimation{
+    animation: MoveDown 1.5s;
+    position: relative;
+    bottom: 0;
+    opacity: 1;
+}
+  
+@keyframes MoveDown{
+    0%{
+        bottom: 50px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+body{
+    background-color: var(--darker);
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+.sidebarImg{
+    background-image: url(images/jonathan-klok-NeRzxya_zyI-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebarImg .logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20vh;
+    height: 120px;
+    padding: 0 20px;
+    background-color: hsla(0, 100%, 0%, 50%);
+}
+
+.sidebarImg .logoContainer::after{
+    content: "NTF";
+    margin-left: 15px;
+    color: white;
+    font-size: 65px;
+    font-weight: 900;
+}
+
+.sidebarImg .logoContainer img{
+    width: 75px;
+    height: 75px;
+    filter: invert(100%) sepia(4%) saturate(16%) hue-rotate(193deg) brightness(107%) contrast(105%);
+}
+
+.formContainer{
+    font-size: 12px;
+    color: var(--text-colour);
+    background: rgb(27,62,56);
+    background: linear-gradient(146deg, rgba(27,62,56,1) 0%, rgba(15,27,23,1) 32%, rgba(9,15,13,1) 100%);
+    /*background-color: var(--darker);*/
+}
+
+.textContainer{
+    width: 70%;
+    max-width: 800px;
+    padding: var(--padding);
+}
+
+.textContainer em{
+    color: #306844;
+}
+
+.textContainer h1{
+    color: var(--text-colour);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.textContainer h1:first-child{
+    margin-bottom: 50px;
+}
+
+fieldset{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: var(--padding-top-bottom) var(--padding);
+    margin-bottom: 50px;
+    max-width: 800px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--dark);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+fieldset input{
+    height: 20px;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+}
+
+fieldset input:focus{
+    background-color: var(--darker);
+    color: var(--text-colour);
+}
+
+.submitArea{
+    margin-left: var(--padding);
+    margin-bottom: 50px;
+}
+
+.submitArea button{
+    transition: all 0.1s;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+.submitArea button:hover{
+    transition: all 0.1s;
+    color: var(--text-colour);
+    background-color: #306844;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: var(--text-colour);
+    font-size: 12px;
+    opacity: 0.2;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 800px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: 100vh;
+    }
+
+    .sidebarImg .logoContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 0;
+        height: 150px;
+        padding: 0;
+        background-color: hsla(0, 100%, 0%, 50%);
+    }
+
+    .textContainer{
+        width: 100%;
+        padding: 50px;
+    }
+
+    .textContainer h1{
+        font-size: 20px;
+    }
+
+    .formContainer{
+        font-size: 15px;
+    }
+
+    fieldset{
+        display: flex;
+        flex-flow: column;
+        gap: 30px;
+        padding: 20px;
+        margin-bottom: 55px;
+        border-radius: 0;
+    }
+
+    fieldset input{
+        height: 35px;
+    }
+
+    .inputContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .submitArea{
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 50px 0;
+        padding: 20px;
+    }
+
+    .submitArea button{
+        transition: all 0.1s;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 30px;
+        border: none;
+        border-radius: 5px;
+        color: #000000;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    footer{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body ondragstart="return false;" ondrop="return false;">
+    <nav>Etch-A-Sketch</nav>
+    <div class="mainContent">
+        <div id="settingsContainer">
+            <div class="colours">
+                <button id="colourRed" value="red"></button>
+                <button id="colourOrange" value="orange"></button>
+                <button id="colourYellow" value="yellow"></button>
+                <button id="colourGreen" value="green"></button>
+                <button id="colourBlue" value="blue"></button>
+                <button id="colourIndego" value="#4B0082"></button>
+                <button id="colourViolet" value="violet"></button>
+                <button id="colourBlack" value="black"></button>
+            </div>
+            <div class="options">
+                <button id="eraserBtn" value="white" class="settingBtn">Eraser</button>
+                <button id="rainbowBtn" value="rainbow" class="settingBtn">Rainbow Mode</button>
+                <button id="fillBtn" class="settingBtn">Fill</button>
+                <button id="clearBtn" class="settingBtn">Clear</button>
+                <p>Size</p>
+                <input id="sizeSlider" type="range" min="1" max="50" value="10">
+                <p id='sizeText'>10 x 10</p>
+            </div>
+        </div>
+        <div id="canvasContainer"></div>
+    </div>
+    <footer>Website By Tom Bowcutt</footer>
+</body>
+</html>

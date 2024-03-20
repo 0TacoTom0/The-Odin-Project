@@ -1,0 +1,142 @@
+body{
+    background-color: #353535;
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+nav{
+    color: white;
+    font-size: 3em;
+    font-weight: bolder;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.blockDiv{
+    background-color: white;
+}
+
+.mainContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#canvasContainer{
+    display: grid;
+    width: 500px;
+    height: 500px;
+}
+
+#settingsContainer{
+    display: grid;
+    grid-template-rows: 75px auto;
+    gap: 5px;
+    row-gap: 200px;
+    width: 130px;
+    height: 480px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #424242;
+    text-align: center;
+    color: white;
+}
+
+.settingBtn{
+    border: none;
+    color: white;
+    background-color: #353535;
+    height: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.1s;
+}
+
+.settingBtn:hover,
+.colours button:hover{
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+
+.settingBtn:active,
+.colours button:active{
+    transform: scale(0.90);
+    transition: 0.1s;
+}
+
+.colours{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.colours button{
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 100px;
+    transition: 0.1s;
+}
+
+.options button{
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.options input{
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin-bottom: 5px
+}
+
+#colourRed{
+    background-color: red;
+}
+
+#colourOrange{
+    background-color: orange;
+}
+
+#colourYellow{
+    background-color: yellow;
+}
+
+#colourGreen{
+    background-color: green;
+}
+
+#colourBlue{
+    background-color: blue;
+}
+
+#colourIndego{
+    background-color: #4B0082;
+}
+
+#colourViolet{
+    background-color: violet;
+}
+
+#colourBlack{
+    background-color: black;
+}
+
+footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:50px;
+    text-align: center;
+    color: white;
+    opacity: 0.5;
+}

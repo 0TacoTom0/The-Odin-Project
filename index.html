@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Odin Project</title>
+    <link rel="stylesheet" href="homepage-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="gradient" id="gradient"></div>
+    <nav>
+        <p>Tom Bowcutt</p>
+        <div class="nav-link-container">
+            <a href="https://github.com/0TacoTom0">My GitHub</a>
+            <a href="#projects">Projects</a>
+            <button onclick="changeMode()"><img src="assets/dark-mode.svg" id="modeImg"></button>
+        </div>
+    </nav>
+    <section class="header-section-container">
+        <div class="header-content-container">
+            <h1>The <span>Odin</span> Project</h1>
+            <p>This is a collection of projects made by me. The Odin Project is an <span>open-source</span> online learning platform that teaches full stack web development with a focus on back-end and JavaScript technologies.</p>
+            <a href="https://www.theodinproject.com/">Course Link</a>
+        </div>
+    </section>
+    <section class="projects-section" id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="row-one">
+                <div class="blue">
+                    <img src="assets/ch-one-img.svg">
+                    <h3>Foundations</h3>
+                    <ol>
+                        <li><a href="pages/projects/foundations/1-Landing-Page/index.html">Landing Page</a></li>
+                        <li><a href="pages/projects/foundations/2-Rock-Paper-Scissors/index.html">Rock Paper Scissors</a></li>
+                        <li><a href="pages/projects/foundations/3-Etch-a-Sketch/index.html">Etch-a-Sketch</a></li>
+                        <li><a href="pages/projects/foundations/4-Calculator/index.html">Calculator</a></li>
+                    </ol>
+                </div>
+                <div class="purple">
+                    <img src="assets/chapter-two-img.svg">
+                    <h3>Intermediate HTML and CSS</h3>
+                    <ol>
+                        <li><a href="pages/projects/intermediate-html-and-css/1-Sign-Up-Form/index.html">Sign-up Form</a></li>
+                        <li><a href="pages/projects/intermediate-html-and-css/2-Admin-Dashboard/index.html">Admin Dashboard</a></li>
+                    </ol>
+                </div>
+                <div class="teal">
+                    <img src="assets/ch-three-img.svg">
+                    <h3>JavaScript</h3>
+                    <ol>
+                        <li><a href="pages/projects/javascript/1-Library/index.html">Library</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row-two">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Some websites might not be displayable on mobile</p>
+        <p>Made by Tom Bowcutt</p>
+    </footer>
+</body>
+</html>

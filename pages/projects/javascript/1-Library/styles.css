@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(241, 241, 241);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    background-color: white;
+}
+
+nav h1{
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 200px;
+}
+
+.addBookOverlay{
+    z-index: 1;
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100lvh;
+    top: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(175, 175, 175, 0.541);
+}
+
+.formDiv{
+    z-index: 2;
+    padding: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.formDiv h2{
+    margin-bottom: 20px;
+}
+
+.formDiv form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+}
+
+.formDiv #titleInput{
+    margin-bottom: 20px;
+}
+
+.formDiv form .formInputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.formInputContainer input{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color:rgb(243, 243, 243);
+}
+
+.formDiv .radioDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+
+.formDiv .radioDiv input{
+    margin-right: 5px;
+}
+
+form button{
+    color: black;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 15px;
+    background-color: rgb(0, 231, 0);
+}
+
+.mainContent{
+    width: 100%;
+    min-height: calc(100vh - 140px);
+    height: 100%;
+}
+
+.mainContent .addButton{
+    width: 100px;
+    height: 50px;
+    color: blue;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.mainContent .addButton:hover{
+    background-color: rgb(197, 197, 197);
+}
+
+.buttonDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.bookContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.bookDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    height: 300px;
+    width: 250px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.bookDiv h2{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.bookDiv p{
+    font-size: 15px;
+}
+
+.bookDiv .bookButtonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.bookDiv button{
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.bookDiv .deleteButton:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.bookDiv .readState{
+    background-color: rgb(0, 179, 0);
+}
+
+.bookDiv .unreadState{
+    background-color: rgb(187, 0, 0);
+}
+
+.bookDiv .readState:hover{
+    background-color: rgb(0, 255, 0);
+}
+
+.bookDiv .unreadState:hover{
+    background-color: rgb(250, 0, 0);
+}
+
+footer{
+    text-align: center;
+    opacity: 0.3;
+}
+
+@media only screen and (max-width: 850px) {
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav h1{
+        margin: 0;
+    }
+
+    .mainContent .addButton{
+        width: 150px;
+        height: 60px;
+        font-size: 15px;
+    }
+
+    .bookDiv{
+        height: 400px;
+        width: 350px;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .bookDiv h2{
+        font-size: 30px;
+    }
+    
+    .bookDiv p{
+        font-size: 20px;
+    }
+
+    .bookDiv button{
+        color: black;
+        border: none;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    footer{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}

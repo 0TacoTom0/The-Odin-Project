@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="icons/tools.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h1>Library</h1>
+    </nav>
+    <div class="addBookOverlay" id="bookOverlay" onclick="getClickedElem(this.id)">
+        <div class="formDiv" id="popup" onclick="getClickedElem(this.id)">
+            <h2>Add Book</h2>
+            <form id="form" onsubmit="submitForm()">
+                <div class="formInputContainer">
+                    <label for="titleInput">Book Title</label>
+                    <input id="titleInput" type="text" required>
+                    <label for="bookRead" style="margin-bottom: 10px;">Book Status</label>
+                    <div class="radioDiv">
+                        <input id="bookRead" type="radio" value="true" name="readStatus" required>
+                        <label for="bookRead">Read</label>
+                    </div>
+                    <div class="radioDiv">
+                        <input id="bookUnread" type="radio" value="false" name="readStatus" required>
+                        <label for="bookUnread">Unread</label>
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="mainContent">
+        <div class="buttonDiv">
+            <button class="addButton" id="addBookBtn">Add New</button>
+        </div>
+        <div class="bookContainer" id="bookContainer"></div>
+    </div>
+    <footer>Made By Tom Bowcutt</footer>
+    <script src="index.js"></script>
+</body>
+</html>
