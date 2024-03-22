@@ -275,10 +275,10 @@ footer p:first-of-type{
     nav{
         padding: 0 30px;
         height: 60px;
-        justify-content: end;
+        justify-content: space-between;
     }
 
-    nav p,
+    
     .nav-link-container a{
         display: none;
     }

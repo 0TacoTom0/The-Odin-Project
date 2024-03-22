@@ -14,34 +14,25 @@
     <nav>
         <h1>Library</h1>
     </nav>
-    <div class="addBookOverlay" id="bookOverlay" onclick="getClickedElem(this.id)">
-        <div class="formDiv" id="popup" onclick="getClickedElem(this.id)">
-            <h2>Add Book</h2>
-            <form id="form" onsubmit="submitForm()">
-                <div class="formInputContainer">
-                    <label for="titleInput">Book Title</label>
-                    <input id="titleInput" type="text" required>
-                    <label for="bookRead" style="margin-bottom: 10px;">Book Status</label>
-                    <div class="radioDiv">
-                        <input id="bookRead" type="radio" value="true" name="readStatus" required>
-                        <label for="bookRead">Read</label>
-                    </div>
-                    <div class="radioDiv">
-                        <input id="bookUnread" type="radio" value="false" name="readStatus" required>
-                        <label for="bookUnread">Unread</label>
-                    </div>
-                </div>
-                <button type="submit">Submit</button>
+    <dialog>
+        <div>
+            <button class="closeBtn">X</button>
+            <form onsubmit="addBookToLibrary()" id="formId">
+                <label for="userBookTitle">Book Title</label>
+                <input type="text" name="title" id="userBookTitle" required>
+                <label for="userStatus">Book Status</label>
+                <select name="status" id="userStatus" required>
+                    <option value=true>Read</option>
+                    <option value=false>Unread</option>
+                </select>
+                <button id="submitBtn" type="submit">Add Book</button>
             </form>
         </div>
+    </dialog>
+    <div class="buttonContainer">
+        <button class="addBookButton" id="addBookBtn">Add Book</button>
     </div>
-    <div class="mainContent">
-        <div class="buttonDiv">
-            <button class="addButton" id="addBookBtn">Add New</button>
-        </div>
-        <div class="bookContainer" id="bookContainer"></div>
-    </div>
-    <footer>Made By Tom Bowcutt</footer>
+    <div class="bookContainer" id="bookContainer"></div>
     <script src="index.js"></script>
 </body>
 </html>
