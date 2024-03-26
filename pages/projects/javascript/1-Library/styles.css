@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    touch-action: manipulation;
 }
 
 body{
@@ -45,6 +46,11 @@ dialog .closeBtn{
     border: none;
     border-radius: 999px;
     font-weight: 600;
+    color: #000000;
+}
+
+dialog .closeBtn:focus{
+    outline: none;
 }
 
 dialog div{
@@ -66,15 +72,27 @@ dialog form input{
     border: solid 1px #dadada
 }
 
+dialog form label{
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
 dialog form input:first-of-type{
     margin-bottom: 20px;
 }
 
 dialog form #submitBtn{
     border: none;
-    background-color: #dadada;
+    background-color: #ffffff;
     border-radius: 50px;
+    border: 1px solid #dadada;
     padding: 10px;
+    color: #000000;
+    font-weight: 400;
+}
+
+dialog form #submitBtn:hover{
+    background-color: #dadada;
 }
 
 dialog form #userStatus{
@@ -82,7 +100,9 @@ dialog form #userStatus{
     margin-bottom: 130px;
     border-radius: 15px;
     padding: 0 10px;
-    border: solid 1px #dadada
+    border: solid 1px #dadada;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .buttonContainer{
@@ -95,7 +115,8 @@ dialog form #userStatus{
     padding: 20px 30px;
     border-radius: 999px;
     border: none;
-    background-color: #dadada;
+    background-color: #ffffff;
+    color: #2b00ff;
     transition: 0.25s;
 }
 
@@ -116,7 +137,7 @@ dialog form #userStatus{
     height: 350px;
     padding: 20px;
     border-radius: 25px;
-    background-color: #dadada;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -143,8 +164,10 @@ dialog form #userStatus{
     width: 100%;
     padding: 10px;
     border-radius: 50px;
-    border: none;
+    border: 1px solid #dadada;
+    background-color: #ffffff;
     transition: 0.25s;
+    color: #000000;
 }
 
 .book #readStateBtn:hover{

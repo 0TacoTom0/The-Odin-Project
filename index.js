@@ -13,7 +13,8 @@ function changeMode(){
             '--font-colour-two': '#000000',
             '--span-p-colour': '#000000',
             '--nav-font-weight': '400',
-            '--header-button-colour': '#EFEFEF',
+            '--header-button-colour': '#FFFFFF',
+            '--a-border-colour': '#3D3D3D',
         };
         setVariables(myVariables);
         gradient.classList.add('hidden');
@@ -30,6 +31,7 @@ function changeMode(){
             '--span-p-colour': '#FFFFFF',
             '--nav-font-weight': '100',
             '--header-button-colour': '#121212',
+            '--a-border-colour': '#00000000',
         };
         setVariables(myVariables);
         gradient.classList.remove('hidden');
