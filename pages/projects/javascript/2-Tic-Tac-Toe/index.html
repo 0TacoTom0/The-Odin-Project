@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <dialog>
+        <form onsubmit="event.preventDefault();">
+            <label for="playerOneName">Player One Name:</label>
+            <input id="playerOneName"></input>
+            <label for="playerTwoName">Player Two Name:</label>
+            <input id="playerTwoName"></input>
+            <div class="modeContainer">
+                <button id="pvpBtn">Play Against Player</button>
+                <button id="aiBtn" value="default">Play Against AI</button>
+            </div>
+        </form>
+    </dialog>
+
+    <h1>Tic <span>Tac</span> Toe</h1>
+    <div class="boardContainer" id="boardContainer"></div>
+    <div class="infoContainer">
+        <p id="statusP">Player One's Turn</p>
+        <div class="scoreContainer">
+            <p id="scoreOne">Player One Score: 1</p>
+            <p id="scoreTwo">Player Two Score: 1</p>
+        </div>
+    </div>
+    <div class="inputContainer">
+        <button onclick="GAME_CONTROLLER.resetGame()">Reset</button>
+        <button id="changeModeBtn">Change Mode</button>
+    </div>
+</body>
+</html>
