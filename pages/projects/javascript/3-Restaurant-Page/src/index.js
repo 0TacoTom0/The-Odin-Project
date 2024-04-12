@@ -1,4 +1,3 @@
-import { addImages } from "./imageLoader";
 import { renderHomePage } from "./pages/homePage";
 import { renderMenuPage } from "./pages/menuPage";
 import { renderAboutPage } from "./pages/aboutPage";
@@ -61,5 +60,4 @@ function swapTab(tab) {
     }
 }
 
-addImages();
 renderHomePage();
