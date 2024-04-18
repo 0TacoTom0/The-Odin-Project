@@ -20,28 +20,6 @@ function renderHomePage() {
             <img src=../src/images/homeImage.png>
         </div>
     </div>
-
-    <div class="wrapper">
-        <div class="marquee">
-            <p>
-                BURGERS BURGERS BURGERS BURGERS BURGERS 
-            </p>
-            <p>
-                BURGERS BURGERS BURGERS BURGERS BURGERS 
-            </p>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <div class="marquee" style=' animation-direction: reverse'>
-            <p>
-                BURGERS BURGERS BURGERS BURGERS BURGERS 
-            </p>
-            <p>
-                BURGERS BURGERS BURGERS BURGERS BURGERS 
-            </p>
-        </div>
-    </div>
     `
 
     main.insertAdjacentHTML( 'beforeend', pageStructure );

@@ -68,28 +68,6 @@
     white-space: pre-line;
 }
 
-.wrapper {
-    max-width: 1250px;
-    width: 100%;
-    overflow: hidden;
-}
-  
-.marquee {
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: marquee 20s linear infinite;
-}
-
-.marquee p {
-    display: inline-block;
-    color: #00000000;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #ff0000;
-    font-size: 64px;
-    font-weight: 900;
-}
-
 /*--------------------------------------------------------*/
 
 @media only screen and (max-width: 1000px) {
@@ -120,14 +98,10 @@
    }
 
    .homeImageContainer img{
-        width: 80%;
-    }
+    width: 100%;
+}
 }
 
-@media only screen and (max-width: 800px) {
-
-}
-  
 @keyframes marquee {
     0% {
       transform: translate3d(0, 0, 0);

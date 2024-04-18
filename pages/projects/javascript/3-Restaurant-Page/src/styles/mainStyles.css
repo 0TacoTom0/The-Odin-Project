@@ -13,9 +13,10 @@
     font-family: "Poppins", sans-serif;
 }
 
-body {
+body{
     color: var(--font-colour-one);
     background-color: var(--body-bg-colour);
+    overflow-x: hidden;
 }
 
 nav{
@@ -226,6 +227,10 @@ footer .follow-us-div div{
         text-align: center;
         flex-direction: column;
         gap: 0px;
+    }
+
+    footer .follow-us-div{
+        gap: 30px;
     }
 
     footer .links-div li:last-of-type{
