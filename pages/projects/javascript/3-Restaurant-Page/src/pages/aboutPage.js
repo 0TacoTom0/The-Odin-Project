@@ -25,6 +25,7 @@ function renderAboutPage() {
 
     <p class='dashesP'>////////</p>
     <img class='aboutImg' src='../src/images/aboutImg.jpg'>
+    <p class='underImgP'>The two friends that are totally real<br>26/02/2010</p>
     `
 
     main.insertAdjacentHTML( 'beforeend', pageStructure );

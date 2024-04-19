@@ -11,18 +11,25 @@
     max-width: 700px;
     border-left: 2px solid white;
     padding-left: 10px;
-    margin-bottom: 50px;
 }
 
 .aboutImg{
     width: 400px;
-    margin-bottom: 100px;
     border: 2px solid white;
+    margin-bottom: 5px;
 }
 
 .dashesP{
     padding-left: 300px;
     font-weight: 700;
+    margin-top: 50px;
+}
+
+.underImgP{
+    margin-bottom: 50px;
+    opacity: 0.5;
+    max-width: 400px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1000px){
@@ -39,5 +46,9 @@
 
     .aboutImg{
         width: 300px;
+    }
+
+    .underImgP{
+        max-width: 300px;
     }
 }
