@@ -89,7 +89,7 @@ function renderMenuPage() {
                             <p>£11.50</p>
                         </li>
                         <li>
-                            <p>Mushroom Swiss Burger</p>
+                            <p>Oppenheimer's Burger</p>
                             <div></div>
                             <p>£10.50</p>
                         </li>
