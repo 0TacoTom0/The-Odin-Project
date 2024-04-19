@@ -1,0 +1,43 @@
+.dashesH1About{
+    margin-top: 75px;
+    text-align: left;
+    font-weight: 700;
+    width: 200px;
+    margin-left: 100px;
+}
+
+.aboutUsP{
+    margin: 20px;
+    max-width: 700px;
+    border-left: 2px solid white;
+    padding-left: 10px;
+    margin-bottom: 50px;
+}
+
+.aboutImg{
+    width: 400px;
+    margin-bottom: 100px;
+    border: 2px solid white;
+}
+
+.dashesP{
+    padding-left: 300px;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 1000px){
+    .dashesH1About {
+        font-size: 10px;
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .dashesP{
+        padding-left: 200px;
+    }
+
+    .aboutImg{
+        width: 300px;
+    }
+}

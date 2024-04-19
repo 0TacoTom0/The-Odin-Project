@@ -6,6 +6,7 @@ import "./styles/mainStyles.css";
 import "./styles/mainBackgroundSvg.css";
 import "./styles/homepageStyles.css";
 import "./styles/menuStyles.css";
+import "./styles/aboutStyles.css";
 
 document.getElementById('homeBtn').addEventListener('click', function() {swapTab('Home')});
 document.getElementById('menuBtn').addEventListener('click', function() {swapTab('Menu')});
