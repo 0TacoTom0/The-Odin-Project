@@ -5,6 +5,7 @@ import { renderAboutPage } from "./pages/aboutPage";
 import "./styles/mainStyles.css";
 import "./styles/mainBackgroundSvg.css";
 import "./styles/homepageStyles.css";
+import "./styles/menuStyles.css";
 
 document.getElementById('homeBtn').addEventListener('click', function() {swapTab('Home')});
 document.getElementById('menuBtn').addEventListener('click', function() {swapTab('Menu')});
@@ -61,3 +62,5 @@ function swapTab(tab) {
 }
 
 renderHomePage();
+
+//cd Repositories/The-Odin-Project/pages/projects/javascript/3-Restaurant-Page/
