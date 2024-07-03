@@ -1,6 +1,6 @@
 # The-Odin-Project
 
-A collection of projects made for the Odin Project course. <br>
+A collection of projects made by me from The Odin Project course. <br><br>
 https://www.theodinproject.com/ <br><br>
 
 > [!NOTE]
