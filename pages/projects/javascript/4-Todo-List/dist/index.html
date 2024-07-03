@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Todo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<script defer src="bunde.js"></script></head>
+<body>
+    <nav>
+        <h1>TooDoo</h1>
+        <button id="hamburger-menu-toggle"></button>
+    </nav>
+    <main>
+        <div id="sidebar">
+            <h2>My Tasks</h2>
+            <div class="filter-buttons-container flex-column-center">
+                <button id="all-tasks-filter-button">
+                    <p>All Tasks</p>
+                    <p id="task-counter">0</p>
+                </button>
+                <button id="today-filter-button">
+                    <p>Today</p>
+                    <p id="task-counter">0</p>
+                </button>
+                <button id="this-week-filter-button">
+                    <p>This Week</p>
+                    <p id="task-counter">0</p>
+                </button>
+                <button id="overdue-filter-button">
+                    <p>Overdue</p>
+                    <p id="task-counter">0</p>
+                </button>
+            </div>
+
+            <h2>My Projects</h2>
+            <div id="project-buttons-container" class="flex-column-center"></div>
+            <div id="project-input-div">
+                <button id="add-project-button">Add</button>
+                <button id="edit-projects-button">Edit</button>
+            </div>
+        </div>
+
+        <div class="task-area-container">
+            <div id="fade-screen-div"></div>
+            <div class="task-filter-and-add-container">
+                <h3 id="current-filter-h3">Inbox</h3>
+                <button id="add-task-button">Add Task</button>
+            </div>
+            <div class="filter-input-container">
+                <label for="select-filter-option">Sort By:</label>
+                <select name="filter" id="select-filter-option">
+                    <option value="due-date-ascending">Ascending Date</option>
+                    <option value="due-date-descending">Descending Date</option>
+                    <option value="priority">Priority</option>
+                </select>
+            </div>
+
+            <div class="tasks-container" id="test">
+                <div class="task">
+                    <div class="task-title-div">
+                        <input type="checkbox">
+                        <div>
+                            <p>Title longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong</p>
+                            <p class="task-description-p">Description</p>
+                            <p class="task-due-date-p">Due Date</p>
+                        </div>
+                    </div>
+                    <div class="task-info-div">
+                        <p>Priority: <span class="high-priority-text">High</span></p>
+                        <p>3:30PM | 24/03/2024</p>
+                        <button class="more-icon"></button>
+                        <div class="dropdown">
+                            <ul>
+                                <li><button>Details</button></li>
+                                <hr>
+                                <li><button>Edit</button></li>
+                                <hr>
+                                <li><button>Delete</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="credit-text">Website Made By Tom Bowcutt</p>
+        </div>
+    </main>
+
+</body>
+</html>
