@@ -57,7 +57,8 @@ export function updateProjectTaskCounter() {
         //if 'currentElementId' is undefined then the id must be a project number
         if (currentElementId == undefined) {
             element.innerHTML = filterTasks(getTaskArray(), Number(element.parentElement.id)).length;
-        } else {
+        }
+        else {
             element.innerHTML = filterTasks(getTaskArray(), currentElementId).length;
         }
     });
@@ -97,7 +98,7 @@ export function updateFilterHeader(name) {
     document.getElementById('current-filter-h3').innerHTML = name;
 }
 
-export function updateActiveButtonElement(name){
+export function updateActiveButtonElement(name) {
     if (document.querySelector('.active-button') !== null) {
         document.querySelector('.active-button').classList.remove('active-button');
     }
@@ -117,9 +118,11 @@ export function renderTasks() {
     
     if (sortBy == 'due-date-ascending') {
         taskArray = sortAscending(taskArray);
-    } else if (sortBy == 'due-date-descending') {
+    }
+    else if (sortBy == 'due-date-descending') {
         taskArray = sortDescending(taskArray);
-    } else if (sortBy == 'priority') {
+    }
+    else if (sortBy == 'priority') {
         taskArray = sortByPriority(taskArray);
     }
 
@@ -250,17 +253,17 @@ export function showForm(mode, taskId) {
     let projectsArray = getProjectsArray();
 
     projectSelectElement.innerHTML = '';
-    projectSelectElement.insertAdjacentHTML('beforeend', `<option value="None">None</option>`);
+    projectSelectElement.insertAdjacentHTML('beforeend', `<option value="">None</option>`);
     for (const project of projectsArray) {
         projectSelectElement.insertAdjacentHTML('beforeend', `
             <option value='${project}' ${projectsArray[getCurrentFilter()] == project ? `selected='selected'` : ``}>${project}</option>
         `);
     }
 
-    if(mode == 'add'){
+    if(mode == 'add') {
         completeButton.innerHTML = 'Add';
     }
-    else{
+    else {
         let taskArray = getTaskArray();
         let index = taskArray.findIndex(task => task.id === taskId);
 

@@ -40,7 +40,8 @@ export function filterTasks(taskArray, currentFilter) {
         };
 
         return taskFilters[currentFilter]();
-    } else {
+    }
+    else {
         filteredTasksArray = filteredTasksArray.filter((task) => task.project == getProjectsArray()[currentFilter]);
         return filteredTasksArray;
     }

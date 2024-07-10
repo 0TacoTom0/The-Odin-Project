@@ -1,6 +1,7 @@
 import './styles/main.scss';
 import { initStorage, updateFilter, addTask, editTask } from './modules/storage';
 import { renderProjects, createAddProjectInput, renderTasks, hideAllDropdowns, showForm, hideForm, getEditedTaskId } from './modules/render';
+import { add } from "date-fns";
 
 initStorage();
 renderProjects();
@@ -84,3 +85,6 @@ document.addEventListener('click', (e) => {
         hideAllDropdowns();
     }
 })
+
+//Set form date input to the current date
+document.getElementById('task-due-date').value = add(new Date(), {hours: 2}).toISOString().substring(0, 16);

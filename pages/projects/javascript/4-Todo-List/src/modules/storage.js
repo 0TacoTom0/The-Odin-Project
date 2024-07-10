@@ -5,24 +5,24 @@ let starterTasks = [
     {
         title: 'Example Task',
         description: 'Example task description!',
-        dueDate: add(new Date(), {hours: 2, minutes: 43}).toISOString().substring(0, 16),
+        dueDate: add(new Date(), {weeks: 5, hours: 2, minutes: 43}).toISOString().substring(0, 16),
         priority: 'Low',
-        project: 'Project 1',
+        project: 'Example Project',
         completed: false,
         id: 'task-0',
     },
     {
         title: 'Make Dinner',
         description: 'I was thinking of making some pizza!',
-        dueDate: add(new Date(), {weeks: 2, days: 6, hours: 4, minutes: 21}).toISOString().substring(0, 16),
+        dueDate: add(new Date(), {hours: 4, minutes: 21}).toISOString().substring(0, 16),
         priority: 'High',
-        project: 'Project 1',
+        project: 'Example Project',
         completed: false,
         id: 'task-1',
     },
 ];
 
-let starterProjects = ['Project 1'];
+let starterProjects = ['Example Project'];
 
 let projectArray = [];
 let taskArray = [];
@@ -57,7 +57,8 @@ export function updateFilter(name) {
     if (currentFilter == undefined) {
         currentFilter = name;
         updateFilterHeader(getProjectsArray()[currentFilter])
-    } else {
+    }
+    else {
         updateFilterHeader(currentFilter);
     }
     updateActiveButtonElement(name);
@@ -78,21 +79,44 @@ export function getProjectsArray() {
 export function addProject(name) {
     if (name != '') {
         projectArray = getProjectsArray();
+
+        for (let i = 0; i < projectArray.length; i++) {
+            if (name == projectArray[i]) {
+                let nameNums = name.match(/\d+/g);
+                if (nameNums == null) {
+                    name = name + '1';
+                }
+                else{
+                    name = name.substring(0, name.length - nameNums[length].length) + (Number(nameNums[length]) + 1);
+                }
+            }
+        }
+
         projectArray.push(name);
         localStorage.setItem('projects', JSON.stringify(projectArray));
     }
 }
 
-export function removeProject(i) {
+export function removeProject(projectIndex) {
+    taskArray = getTaskArray();
     projectArray = getProjectsArray();
-    if (i > -1) {
-        projectArray.splice(i, 1);
+
+    for (let i = 0; i < taskArray.length; i++) {
+        if (taskArray[i].project == projectArray[projectIndex]) {
+            taskArray[i].project = '';
+            localStorage.setItem('tasks', JSON.stringify(taskArray));
+        }
+    }
+
+    if (projectIndex > -1) {
+        projectArray.splice(projectIndex, 1);
     }
     localStorage.setItem('projects', JSON.stringify(projectArray));
 
-    if (currentFilter > i && typeof currentFilter != 'string') {
+    if (currentFilter > projectIndex && typeof currentFilter != 'string') {
         updateFilter(currentFilter-1);
-    } else if (currentFilter == i) {
+    }
+    else if (currentFilter == projectIndex) {
         //if the active project is deleted swap back to the 'All Projects' filter
         updateFilter('all-tasks-filter-button');
     }
@@ -107,13 +131,13 @@ export function getTaskArray() {
 }
 
 export function setTaskId() {
-    projectArray = getTaskArray();
+    taskArray = getTaskArray();
 
-    for (let i = 0; i < projectArray.length; i++) {
-        projectArray[i].id = `task-${i}`;
+    for (let i = 0; i < taskArray.length; i++) {
+        taskArray[i].id = `task-${i}`;
     }
-    localStorage.setItem('tasks', JSON.stringify(projectArray));
-    return projectArray;
+    localStorage.setItem('tasks', JSON.stringify(taskArray));
+    return taskArray;
 }
 
 export function addTask(newTask) {
