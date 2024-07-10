@@ -220,6 +220,11 @@ body{
             font-size: 12px;
         }
 
+        option{
+            color: $fontCol1;
+            background-color: $col1;
+        }
+
         label{
             font-size: 14px;
             margin-bottom: 5px;
