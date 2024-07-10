@@ -3,44 +3,26 @@ import { add } from "date-fns";
 
 let starterTasks = [
     {
-        title: 'Do the dishes',
-        description: 'Kinda self explanatory...',
+        title: 'Example Task',
+        description: 'Example task description!',
         dueDate: add(new Date(), {hours: 2, minutes: 43}).toISOString().substring(0, 16),
-        priority: 'High',
+        priority: 'Low',
         project: 'Project 1',
         completed: false,
         id: 'task-0',
     },
     {
-        title: 'Finish the Odin Project',
-        description: 'Or else I might end up homeless :(',
+        title: 'Make Dinner',
+        description: 'I was thinking of making some pizza!',
         dueDate: add(new Date(), {weeks: 2, days: 6, hours: 4, minutes: 21}).toISOString().substring(0, 16),
-        priority: 'Low',
+        priority: 'High',
         project: 'Project 1',
         completed: false,
         id: 'task-1',
     },
-    {
-        title: 'Do some homework',
-        description: 'Maths and stuff.',
-        dueDate: add(new Date(), {days: 1}).toISOString().substring(0, 16),
-        priority: 'Low',
-        project: 'Project 2',
-        completed: true,
-        id: 'task-2',
-    },
-    {
-        title: 'Make dinner',
-        description: 'I was thinking something like fried chicken?',
-        dueDate: add(new Date(), {hours: 2}).toISOString().substring(0, 16),
-        priority: 'Medium',
-        project: 'Project 2',
-        completed: false,
-        id: 'task-3',
-    },
 ];
 
-let starterProjects = ['Project 1', 'Project 2'];
+let starterProjects = ['Project 1'];
 
 let projectArray = [];
 let taskArray = [];
