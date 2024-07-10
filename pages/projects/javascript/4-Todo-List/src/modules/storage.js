@@ -134,9 +134,30 @@ export function setTaskId() {
     return projectArray;
 }
 
-export function addTask(name) {
+export function addTask(newTask) {
     taskArray = getTaskArray();
-    taskArray.push(name);
+
+    if (newTask.title == '') {
+        newTask.title = 'Untitled task'
+    }
+    if (newTask.description == '') {
+        newTask.description = 'No description'
+    }
+
+    taskArray.push(newTask);
+    localStorage.setItem('tasks', JSON.stringify(taskArray));
+}
+
+export function editTask(taskId, newTask) {
+    taskArray = getTaskArray();
+    let index = taskArray.findIndex(task => task.id === taskId);
+
+    taskArray[index].title = newTask.title;
+    taskArray[index].description = newTask.description;
+    taskArray[index].dueDate = newTask.dueDate;
+    taskArray[index].priority = newTask.priority;
+    taskArray[index].project = newTask.project;
+
     localStorage.setItem('tasks', JSON.stringify(taskArray));
 }
 

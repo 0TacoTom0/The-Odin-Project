@@ -3,8 +3,6 @@ import { sortAscending, sortDescending, sortByPriority } from "./sort";
 import { filterTasks } from "./filter";
 import { format } from "date-fns";
 
-format
-
 //Render Project Functions
 
 export function renderProjects() {
@@ -189,7 +187,7 @@ export function renderTasks() {
         })
 
         document.getElementById(`${taskArray[i].id}-edit-button`).addEventListener('click', function() {
-            console.log('edit');
+            showForm('edit', taskArray[i].id);
             hideAllDropdowns();
         })
 
@@ -216,16 +214,17 @@ function renderDetails(task) {
     document.body.insertAdjacentHTML('beforeend', `
         <div class='background-fade'>
             <div class='details-container'>
-                <div class='title-container'>
-                    <h3>${task.title}<h3>
-                    <button id='close-details'>Close</button>
+            <div class='details-flex-container'>
+                <div class='priority-and-date-container'>
+                    <p>Priority: <span>${task.priority}</span></p>
+                    <hr>
+                    <p>${format(new Date(task.dueDate), 'dd/MM/yyyy p')}</p>
                 </div>
-                <p>${format(new Date(task.dueDate), 'dd/MM/yyyy p')}</p>
-                <p>Priority: <span>${task.priority}</span></p>
-                <p>Description:</p>
-                <p>${task.description}</p>
+                <h3>${task.title}</h3>
+                <p class='description-content-p'>${task.description}</p>
             </div>
-
+            <button id='close-details'>Close</button>
+            </div>
         </div>`
     );
 
@@ -239,4 +238,61 @@ function renderDetails(task) {
     document.getElementById('close-details').addEventListener('click', function () {
         document.querySelector('.background-fade').remove();
     })
+}
+
+//Form  Functions
+let editTaskId = '';
+
+export function showForm(mode, taskId) {
+    let form = document.getElementById('add-task-form');
+    let completeButton = document.getElementById('form-complete-button');
+    let projectSelectElement = document.getElementById('task-project');
+    let projectsArray = getProjectsArray();
+
+    projectSelectElement.innerHTML = '';
+    projectSelectElement.insertAdjacentHTML('beforeend', `<option value="None">None</option>`);
+    for (const project of projectsArray) {
+        projectSelectElement.insertAdjacentHTML('beforeend', `
+            <option value='${project}' ${projectsArray[getCurrentFilter()] == project ? `selected='selected'` : ``}>${project}</option>
+        `);
+    }
+
+    if(mode == 'add'){
+        completeButton.innerHTML = 'Add';
+    }
+    else{
+        let taskArray = getTaskArray();
+        let index = taskArray.findIndex(task => task.id === taskId);
+
+        insertTaskDetailsToBeChanged(taskArray[index]);
+        editTaskId = taskId;
+        completeButton.innerHTML = 'Change';
+    }
+
+    form.classList.remove('form-hide');
+}
+
+export function hideForm() {
+    let form = document.getElementById('add-task-form');
+    form.classList.add('form-hide');
+    clearForm();
+}
+
+function clearForm() {
+    document.getElementById('task-title').value = '';
+    document.getElementById('task-description').value = '';
+    document.getElementById('task-due-date').value = "2024-01-01T00:00";
+    document.getElementById('task-priority').selectedIndex = 0;
+}
+
+function insertTaskDetailsToBeChanged(task) {
+    document.getElementById('task-title').value = task.title;
+    document.getElementById('task-description').value = task.description;
+    document.getElementById('task-due-date').value = task.dueDate;
+    document.getElementById('task-priority').value = task.priority;
+    document.getElementById('task-project').value = task.project;
+}
+
+export function getEditedTaskId() {
+    return editTaskId;
 }

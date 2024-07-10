@@ -57,36 +57,41 @@
                     <option value="priority">Priority</option>
                 </select>
             </div>
+            <div class="tasks-container"></div>
 
-            <div class="tasks-container" id="test">
-                <div class="task">
-                    <div class="task-title-div">
-                        <input type="checkbox">
-                        <div>
-                            <p>Title longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong</p>
-                            <p class="task-description-p">Description</p>
-                            <p class="task-due-date-p">Due Date</p>
-                        </div>
-                    </div>
-                    <div class="task-info-div">
-                        <p>Priority: <span class="high-priority-text">High</span></p>
-                        <p>3:30PM | 24/03/2024</p>
-                        <button class="more-icon"></button>
-                        <div class="dropdown">
-                            <ul>
-                                <li><button>Details</button></li>
-                                <hr>
-                                <li><button>Edit</button></li>
-                                <hr>
-                                <li><button>Delete</button></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <p class="credit-text">Website Made By Tom Bowcutt</p>
         </div>
     </main>
+    <form class="form-hide" id="add-task-form" onsubmit="event.preventDefault()">
+        <div class="form-content-container">
+            <label for="task-title">Title</label>
+            <input id="task-title" type="text" maxlength="50">
+    
+            <label for="task-description">Description</label>
+            <textarea id="task-description" maxlength="500"></textarea>
+    
+            <label for="task-due-date">Due Date</label>
+            <input id="task-due-date" type="datetime-local" value="2024-01-01T00:00" max="9999-12-31T24:00" onkeydown="return false">
+    
+            <label for="task-priority">Priority</label>
+            <div class="form-priority-container">
+                <select id="task-priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+    
+            <label for="task-project">Project</label>
+            <div class="form-project-container">
+                <select id="task-project"></select>
+            </div>
 
+            <div class="form-buttons-container">
+                <button id="form-complete-button"></button>
+                <button id="form-cancel-button">Cancel</button>
+            </div>
+        </div>
+    </form>
 </body>
 </html>

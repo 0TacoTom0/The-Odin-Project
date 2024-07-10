@@ -9,14 +9,6 @@ $fontCol2: #888888;
 
 $borderGrey: 1px solid $col5;
 
-//Preload icons
-body::after{
-    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-    width: 10px;
-    height: 10px;
-    content: url(../assets/delete-icon.svg);
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -32,7 +24,14 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100svh;
+    position: relative;
     background-color: $col2;
+
+    //Preload icons
+    &:after{
+        position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+        content: url('../assets/arrow-down.svg') url('../assets/delete-icon.svg');
+    }
 
     .background-fade{
         position: absolute;
@@ -45,25 +44,209 @@ body{
         backdrop-filter: blur(1px) brightness(50%);
         -webkit-backdrop-filter: blur(1px) brightness(50%);
 
+        h3{
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
         p{
             font-size: 14px;
+            color: $fontCol2;
+
         }
 
         .details-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             padding: 20px;
-            margin: 100px 20px 0 20px;
+            margin: 150px 20px 0 20px;
             width: 500px;
             height: fit-content;
-            min-height: 500px;
+            min-height: 300px;
             border: $borderGrey;
             background-color: $col2;
             border-radius: 10px;
+            box-shadow: inset 0 0 35px 5px rgb(146 127 127 / 25%), inset 0 2px 1px 1px rgb(0 0 0 / 90%), inset 0 -2px 1px rgb(0 0 0 / 25%);
 
-            .title-container{
+            button{
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
+                padding: 8px 15px;
+                background: none;
+                border: $borderGrey;
+                border-radius: 999px;
+                font-size: 12px;
+                cursor: pointer;
+                margin: 20px 0 0 auto;
+
+                &:before{
+                    content: ' ';
+                    transform: rotate(45deg);
+                    background: url('../assets/plus-icon.svg') no-repeat;
+                    background-size: 12px 12px;
+                    width: 12px;
+                    height: 12px;
+                    display: block;
+                    margin-right: 5px;
+                }
             }
+
+            .priority-and-date-container{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+
+                p{
+                    font-size: 12px;
+                }
+
+                hr{
+                    width: 3px;
+                    height: 3px;
+                    border-radius: 99px;
+                    margin: 0 5px;
+                    border: $borderGrey;
+                    background-color: $col5;
+                }
+            }
+        }
+
+        .description-p{
+            margin-top: 20px;
+        }
+
+        .description-content-p{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            white-space: wrap;
+            max-width: fit-content;
+        }
+    }
+
+    .form-hide{
+        display: none !important;
+    }
+
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #00000075;
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+
+        .form-content-container{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            max-width: 400px;
+            background-color: $col1;
+            border: $borderGrey;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 20px;
+            box-shadow: inset 0 0 35px 5px rgb(146 127 127 / 25%), inset 0 2px 1px 1px rgb(0 0 0 / 90%), inset 0 -2px 1px rgb(0 0 0 / 25%);
+
+            .form-priority-container, .form-project-container{
+                display: flex;
+                align-items: center;
+                background: none;
+                border: $borderGrey;
+                border-radius: 5px;
+                padding: 0 5px;
+                margin-bottom: 10px;
+
+                select{
+                    width: 100%;
+                    background: none;
+                    border: none;
+                    appearance: none;
+                    --webkit-appearance: none;
+                    cursor: pointer;
+                    padding: 5px 0;
+                    z-index: 1;
+
+                    &:focus-visible{
+                        outline: none;
+                    }
+                }
+
+                &:after {
+                    content: "";
+                    background: url(../assets/arrow-down.svg) no-repeat;
+                    background-size: 12px 12px;
+                    width: 12px;
+                    height: 12px;
+                    display: inline;
+                    position: relative;
+                    left: -12px;
+                    margin-right: -12px;
+                }
+            }
+        }
+
+        .form-buttons-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 10px;
+                padding: 0 12px;
+                width: 100%;
+                background: none;
+                border: $borderGrey;
+                border-radius: 99px;
+                font-size: 12px;
+                height: 35px;
+                cursor: pointer;
+            }
+        }
+
+        p, input, select, textarea{
+            font-size: 12px;
+        }
+
+        label{
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        input, textarea{
+            appearance: none;
+            --webkit-appearance: none;
+            background: none;
+            border: $borderGrey;
+            border-radius: 5px;
+            padding: 5px;
+            resize: none;
+            color-scheme: dark;
+            margin-bottom: 10px;
+            
+            &:focus-visible{
+                outline: none;
+            }
+        }
+
+        input::-webkit-date-and-time-value {
+            text-align: left;
+        }
+
+        #task-description{
+            min-height: 100px;
         }
     }
 }
@@ -359,7 +542,7 @@ nav{
     border: $borderGrey;
     border-bottom: none;
     border-radius: 10px 10px 0 0;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(124, 101, 101, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgb(105 105 105 / 25%) 0px 50px 100px -20px, rgba(124, 101, 101, 0.3) 0px 30px 60px -30px;
     flex: 1;
 
     .task-filter-and-add-container{
